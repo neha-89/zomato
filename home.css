@@ -1,0 +1,39 @@
+body{
+    margin:auto;
+}
+.heading{
+    height:60px;
+    background-color: coral;
+    
+}
+#icon{
+    float: left;
+}
+.social{
+    float:right;
+    }
+#slogo{
+    width: 150px;
+    
+}
+.image{
+    height:400px;
+    background-image: url("./images/banner.jpg");
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background-size: 100% 400px;
+
+
+}
+
+#text{
+    position: absolute;
+}
+.quick-search{
+    height: 500px;
+    border: 2px double red;
+}
+.footer{
+    height: 50px;
+    border: 2px dashed green;
+}
