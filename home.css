@@ -1,7 +1,8 @@
 body{
     margin:auto;
+    background-color:#ffe9cb;
 }
-.heading{
+.nav{
     height:60px;
     background-color: coral;
     
@@ -17,37 +18,112 @@ body{
     
 }
 .image{
+    position: relative;
     height:400px;
     background-image: url("./images/banner.jpg");
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     background-size: 100% 400px;
-
-
+   
+    
 }
+/* .image::before{
+    position: absolute;
+    background-image: url("./images/banner.jpg");
+    background-color: rgba(152, 66, 211, 0.63);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity:0.75;
+} */
 
 .logo{
     position: absolute;
-    width:160px;
-    height:157px;;
+    width:79px;
+    height:78px;;
     border-radius: 50%;
     background-color:#df3e1f;
     float:left;
-    margin-top:105px;
-    margin-left: 43%;
+    margin-top:60px;
+    margin-left: 46%;
 }
-#text{
+.logo > span {
     position: absolute;
     color:white;
-    font-size:90px;
-    margin-left:42px;
-    margin-top:17%;
+    font-size:42px;
+    margin-left:22px;
+    margin-top:18%;
+    
 }
+#heading{
+    margin-top: 13%;
+    margin-left: 30%;
+    position: absolute;
+    color: #f67e4f;
+    font-size: 35px;
+}
+.dropdown {
+    width: 51%;
+    height: 40px;
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 28%;
+   
+}
+select{
+    height: 60px;
+    width:35%;
+    text-align: center;
+    background-color:#f67e4f;;
+    border:none;
+    font-size:15px;
+    padding-left:17px;
+}
+.restlist{
+    width:50%;
+    padding-left: 44px;
+}
+
 .quick-search{
-    height: 500px;
-    border: 2px double red;
+    height: 600px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top:5%;
+    /* background-color: yellow; */
+    
+}
+#quickheading{
+    color:red;
+    font-size:30px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display:block;
+    margin-left: 2%;
+}
+#quicksubheading{
+    line-height: 2;
+    font-size:16px;
+    color:gray;
+    margin-left: 2%;
+
+}
+
+.tileContainer{
+    height: 200px;
+    width: 30%;
+    float: left;
+    margin-top: 4%;
+    margin-left: 23px;
+    border: 2px solid black;
+    box-shadow: 10px 20px 10px gray;
 }
 .footer{
     height: 50px;
-    border: 2px dashed green;
+    font-size:10px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    color:red;
+    background-color:#f67e4f;
 }
