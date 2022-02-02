@@ -54,7 +54,14 @@ body{
     font-size:42px;
     margin-left:22px;
     margin-top:18%;
-    
+}
+.vl{
+    border-left: 2px solid white;
+    height: 29px;
+    position: absolute;
+    float: left;
+    margin-top: 72%;
+    margin-left: 49%;
 }
 #heading{
     margin-top: 13%;
@@ -85,38 +92,62 @@ select{
     padding-left: 44px;
 }
 
-.quick-search{
-    height: 600px;
-    width: 80%;
+#QuickSearch{
+    height:600px;
+    width:80%;
     margin-left: 10%;
     margin-top:5%;
-    /* background-color: yellow; */
-    
 }
-#quickheading{
-    color:red;
+#QuickHeading{
+    color:orange;
     font-size:30px;
-    font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:bold;
     display:block;
     margin-left: 2%;
 }
-#quicksubheading{
-    line-height: 2;
-    font-size:16px;
-    color:gray;
-    margin-left: 2%;
 
+#QuickSubHeading{
+    line-height: 2;
+    color:gray;
+    font-size:20px;
+    margin-left: 2%;
 }
 
 .tileContainer{
-    height: 200px;
-    width: 30%;
+    height:200px;
+    width:30%;
     float: left;
-    margin-top: 4%;
-    margin-left: 23px;
-    border: 2px solid black;
+    margin-top: 2%;
+    margin-left: 2%;
     box-shadow: 10px 20px 10px gray;
+}
+.tileComponent1{
+    width:58%;
+    float: left;
+    height:200px;
+}
+.tileComponent1 > img{
+    height:200px;
+    width:100%;
+}
+.tileComponent2{
+    width:32%;
+    float: left;
+    height:100px;
+    margin-left: 7%;
+    margin-top: 15%;
+}
+.componentHeading{
+    font-size: 25px;
+    color:orange;
+}
+
+.componentHeading > a{
+    color:orange;
+}
+.componentSubHeading{
+    color:gray;
 }
 .footer{
     height: 50px;
