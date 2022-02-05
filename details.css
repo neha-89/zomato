@@ -1,0 +1,90 @@
+body{
+    margin:auto;
+    background-color:#ffe9cb;
+}
+.nav{
+    height:60px;
+    background-color: coral;
+    
+}
+#icon{
+    float: left;
+}
+.social{
+    float:right;
+    }
+#slogo{
+    width: 150px;
+    
+}
+#heading{
+    text-align: center;
+}
+#mainContent{
+    height:550px;
+    width:90%;
+    margin-left:5%;
+    margin-top:2%;
+}
+.imgDiv{
+    height:400px;
+    width:40%;
+    float: left;
+    border:5px groove gray
+}
+.imgDiv > img {
+    height:400px;
+    width:100%; 
+}
+.contentDiv{
+    height:500px;
+    width:55%;
+    margin-left:2%;
+    float: left;
+    margin-top: -2%;
+}
+.feature_container{
+    width:100%;
+    display: inline-block;
+}
+.feature{
+    float: left;
+    margin-left:5%;
+}
+.imgIcon{
+    height:100px;
+    width:100px;
+    margin-left:2%
+}
+h2{
+    font-size: 35px;
+    color:green;
+}
+.fa-amazon{
+    font-size:25px;
+    color:orange
+}
+.checked{
+    color:red
+}
+.btn{
+    height:50px;
+    width:200px;
+    font-size:20px;
+    color:white;
+    background-color:rgb(191, 236, 123)
+}
+
+.btn-proceed{
+    background-color:rgb(144, 145, 235)
+}
+.footer{
+    
+    height: 50px;
+    font-size:10px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    color:red;
+    background-color:#f67e4f;
+}
