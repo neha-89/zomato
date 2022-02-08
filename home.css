@@ -121,6 +121,22 @@ select{
     margin-top: 2%;
     margin-left: 2%;
     box-shadow: 10px 20px 10px gray;
+    animation: dance 10s infinite;
+}
+.tileContainer:hover{
+    /*transform: scale(1.1);
+    transform: skewX(-20deg);
+    transform: rotate(20deg);*/
+    transform: scale(1.1)
+}
+
+@keyframes dance{
+    0% {transform: rotate(-5deg)}
+    25% {transform: rotate(0deg)}
+    50% {transform: rotate(5deg)}
+    60% {transform: scale(1.1)}
+    75% {transform: rotate(0deg)}
+    100% {transform: rotate(-5deg)}
 }
 .tileComponent1{
     width:58%;
