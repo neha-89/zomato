@@ -6,27 +6,51 @@
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='home.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src='main.js'></script>
 </head>
 <body>
     <header>
-        <div class="nav">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Zomato</a>    
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- <div class="nav">
             
             <h1 id="icon">Zomato</h1>
         
         <div class="social">
             <img  id ="slogo" src="https://i.ibb.co/QknySdY/Daco-5361039.png" alt="Daco-5361039" />
-        </div>
+        </div> -->
     </div>
    </header>
+
     <div class="image">
         <div class="container">
             <div class="logo">
                 <span>Z!</span>
                 <!-- <div class="vl"></div> -->
             </div>
-                <div id="heading">
-                    Find The Best Restaurants Near You 
+            <h3>Find The Best Restaurants Near You</h3>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                       <select class="form-control" id="city">
+                           <option>Delhi</option>
+                           <option>Mumbai</option>
+                           <option>NewYork</option>
+                        </select>
+                    </div>
                 </div>
                 <div class= dropdown>
                     <select >
