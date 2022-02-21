@@ -12,9 +12,8 @@ body{
     
 }
 .image{
-    position: relative;
+    position: absolute;
     height:400px;
-    margin-top: -21px;
     background-image: url("./images/banner.jpg");
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
@@ -40,8 +39,13 @@ body{
     border-radius: 50%;
     background-color:#df3e1f;
     float:left;
-    margin-top:60px;
+    margin-top:80px;
     margin-left: 46%;
+}
+.logo >span{
+    margin-left:19px;
+    font-size:54px;
+    color:white;
 }
 h3{
     position: absolute;
@@ -49,25 +53,24 @@ h3{
     font-size: 30px;
     margin-left: 32%;
 }
-.vl{
+/* .vl{
     border-left: 2px solid white;
     height: 29px;
     position: absolute;
     float: left;
     margin-top: 72%;
     margin-left: 49%;
-}
-#heading{
-    margin-top: 13%;
-    margin-left: 30%;
+} */
+.heading{
     position: absolute;
+    margin-top: 13%;
+    margin-left: 29%;
     color: #f67e4f;
     font-size: 35px;
 }
 .dropdown {
     width: 51%;
     height: 40px;
-    position: absolute;
     margin-top: 18%;
     margin-left: 28%;
    
@@ -86,11 +89,10 @@ select{
     padding-left: 44px;
 }
 
-#QuickSearch{
+.QuickSearch{
+    position: absolute;
     height:600px;
-    width:80%;
-    margin-left: 10%;
-    margin-top:5%;
+    margin-top:35%;
 }
 #QuickHeading{
     color:orange;
@@ -98,16 +100,18 @@ select{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight:bold;
     display:block;
-    margin-left: 2%;
+    margin-left: 6%;
 }
 
 #QuickSubHeading{
     line-height: 2;
     color:gray;
     font-size:20px;
-    margin-left: 2%;
+    margin-left: 6%;
 }
-
+.card{
+    margin:8px;
+}
 .tileContainer{
     height:200px;
     width:30%;
