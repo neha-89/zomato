@@ -1,14 +1,9 @@
 body{
-    margin:auto;
+    margin:0;
     background-color:#ffe9cb;
 }
 .navbar{
-    background-color: coral;
-    
-}
-
-#slogo{
-    width: 150px;
+    background-color:#df3e1f;
     
 }
 .image{
@@ -18,8 +13,6 @@ body{
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     background-size: 100% 400px;
-   
-    
 }
 /* .image::before{
     position: absolute;
@@ -42,16 +35,14 @@ body{
     margin-top:80px;
     margin-left: 46%;
 }
+.navbar-brand{
+    color: white;
+    font-size: 20px;
+}
 .logo >span{
     margin-left:19px;
     font-size:54px;
     color:white;
-}
-h3{
-    position: absolute;
-    margin-top: 150px;
-    font-size: 30px;
-    margin-left: 32%;
 }
 /* .vl{
     border-left: 2px solid white;
@@ -69,26 +60,18 @@ h3{
     font-size: 35px;
 }
 .dropdown {
-    width: 51%;
-    height: 40px;
     margin-top: 18%;
-    margin-left: 28%;
+    margin-left: 30%;
    
 }
-select{
-    height: 60px;
-    width:35%;
-    text-align: center;
-    background-color:#f67e4f;;
-    border:none;
-    font-size:15px;
-    padding-left:17px;
+#dropdownMenuButton1{
+    height: 66px;
+    width: 28%;
 }
-.restlist{
-    width:50%;
-    padding-left: 44px;
+#dropdownMenuButton2{
+    height: 66px;
+    width: 34%;
 }
-
 .QuickSearch{
     position: absolute;
     height:600px;
@@ -102,7 +85,6 @@ select{
     display:block;
     margin-left: 6%;
 }
-
 #QuickSubHeading{
     line-height: 2;
     color:gray;
@@ -111,6 +93,9 @@ select{
 }
 .card{
     margin:8px;
+}
+ul{
+    list-style: none;
 }
 .tileContainer{
     height:200px;
@@ -135,39 +120,134 @@ select{
     75% {transform: rotate(0deg)}
     100% {transform: rotate(-5deg)}
 }
-.tileComponent1{
-    width:58%;
-    float: left;
-    height:200px;
-}
-.tileComponent1 > img{
-    height:200px;
-    width:100%;
-}
-.tileComponent2{
-    width:32%;
-    float: left;
-    height:100px;
-    margin-left: 7%;
-    margin-top: 15%;
-}
-.componentHeading{
-    font-size: 25px;
-    color:orange;
+
+.footer{
+    background-color:#f67e4f;
 }
 
-.componentHeading > a{
-    color:orange;
+@media screen and (max-width:1600px){
+    body{
+        background-color:lightblue
+    }
 }
-.componentSubHeading{
-    color:gray;
+
+@media screen and (max-width:1400px){
+    body{
+        background-color:rgb(202, 241, 215)
+    }
 }
-.footer{
-    height: 50px;
-    font-size:10px;
-    padding: 5px;
-    font-weight: bold;
-    text-align: center;
-    color:red;
-    background-color:#f67e4f;
+
+@media screen and (max-width:1200px){
+    body{
+        background-color:rgb(237, 245, 209);
+        margin:0px;
+    }
+    .heading{
+        margin-top:14%;
+        margin-left:26%;
+    }
+    .dropdown {
+        margin-top: 20%;
+        margin-left: 29%;
+    }
+    
+    #QuickHeading{
+       margin-left:7%;
+       margin-top:3%;
+    }
+    #QuickSubHeading{
+        margin-left:7%;
+        margin-top:3%;
+    }
+   
+}
+
+@media screen and (max-width:1000px){
+    body{
+        background-color:rgb(242, 209, 245)
+    }
+    .heading{
+        margin-top:22%;
+        margin-left:13%;
+    }
+    .dropdown {
+        margin-top: 30%;
+        margin-left:19%;
+    }
+    #dropdownMenuButton1{
+        width: 39%;
+    }
+    #dropdownMenuButton2{
+        width: 42%;
+    }
+    #QuickHeading{
+       margin-left:5%;
+       margin-top:17%;
+    }
+    #QuickSubHeading{
+        margin-left:5%;
+        margin-top:3%;
+    }
+   
+}
+@media screen and (max-width:800px){
+    body{
+        background-color:rgb(163, 240, 243)
+    }
+    .heading{
+        margin-top:26%;
+        margin-left:15%;
+        font-size: 26px;
+    }
+    .dropdown {
+        margin-top: 36%;
+        margin-left: 20%;
+    }
+    #dropdownMenuButton1{
+        width:37%;
+    }
+    #dropdownMenuButton2{
+        width: 48%;
+    }
+    #QuickHeading{
+       margin-left:7%;
+       margin-top:36%;
+    }
+    #QuickSubHeading{
+        margin-left:7%;
+        margin-top:3%;
+    }
+   
+}
+@media screen and (max-width:600px){
+    body{
+        background-color:rgb(246, 202, 196)
+    }
+    .logo{
+        margin-left:185px;
+    }
+    .heading{
+        margin-top:35%;
+        margin-left:5%;
+    }
+    .dropdown {
+        margin-top: 49%;
+        margin-left:5%;
+    }
+    #dropdownMenuButton1{
+        width:41%;
+    }
+    #dropdownMenuButton2{
+        width:53%;
+    }
+    
+    #QuickHeading{
+       margin-left:4%;
+       margin-top:53%;
+    }
+    #QuickSubHeading{
+        margin-left:4%;
+        margin-top:3%;
+    }
+   
 }
