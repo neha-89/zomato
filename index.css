@@ -1,6 +1,34 @@
 body{
     margin:0;
-    background-color:#ffe9cb;
+    background-color:white;
+    color:black;
+} 
+.dark-mode{
+    background-color: black;
+    color: grey;
+}
+ .dark-mode button {
+    background: black;
+    color: white;
+  } 
+  
+  .dark-mode .sun-icon,
+  .moon-icon {
+    display: none;
+  }
+  
+  .dark-mode .moon-icon {
+    display: inline;
+  }
+
+ul li a {
+    list-style: none;
+    padding-right: 20px;
+    color:white;
+    text-decoration: none;
+}
+li{
+    margin-top: 11px;
 }
 .navbar{
     background-color:#df3e1f;
