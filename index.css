@@ -20,7 +20,17 @@ body{
   .dark-mode .moon-icon {
     display: inline;
   }
-
+#coupon{
+    position: absolute;
+    z-index: 100;
+    background-color:gray;
+    visibility: hidden;
+    margin-top: 161px;
+    margin-left: 465px;
+}
+.couponbtn{
+   position: absolute;
+}
 ul li a {
     list-style: none;
     padding-right: 20px;

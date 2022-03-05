@@ -8,6 +8,16 @@
     </head>
     <body>
         <header>
+          <div>
+            <div id="coupon">
+                <button onClick="closeCoupon()" class="couponbtn">&times;</button>
+                <img src="./images/1c.jpeg" alt="coupon"  width="372px" height="347px">
+            </div>
+        </div>
+          <!-- <div class="coupon">
+              <button onClick="closeCoupon()">&times;</button>
+            <img src="./images/1c.jpeg" alt="coupon" width="372px" height="347px">
+          </div> -->
           <div class="container-fluid">
             <nav class="navbar navbar-expand-lg fixed-top">
               <div class="container-fluid">
@@ -206,5 +216,9 @@
                       <a class="text-light text-decoration-none" href="https://mdbootstrap.com/">Neha</a>
                     </div> 
             </footer>
+            <script>
+              window.onload = loadCoupon();
+            </script>
     </body>
+   
 </html>
