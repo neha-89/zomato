@@ -49,6 +49,10 @@ li{
     background-color:#df3e1f;
     
 }
+
+.navbottom{
+    margin-bottom:-29px;
+}
 .image{
     position: absolute;
     height:400px;
@@ -80,6 +84,7 @@ li{
 }
 .navbar-brand{
     color: white;
+    margin-bottom:25px;
     font-size: 20px;
 }
 .logo >span{
