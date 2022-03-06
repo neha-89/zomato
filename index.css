@@ -25,11 +25,16 @@ body{
     z-index: 100;
     background-color:gray;
     visibility: hidden;
-    margin-top: 161px;
+    margin-top: 109px;
     margin-left: 465px;
 }
 .couponbtn{
    position: absolute;
+}
+.couponimg{
+    width:372;
+    height:347px;
+    border:3px solid gray;
 }
 ul li a {
     list-style: none;
