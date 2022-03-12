@@ -49,6 +49,10 @@ ul li a {
     color:white;
     text-decoration: none;
 }
+#out{
+    margin-top: -26px;
+    margin-left: 28px;
+}
 li{
     margin-top: 11px;
 }
