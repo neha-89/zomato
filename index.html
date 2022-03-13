@@ -11,21 +11,17 @@
           <div>
             <div id="coupon">
                 <button onClick="closeCoupon()" class="couponbtn">&times;</button>
-                <img src="./images/1c.jpeg" alt="coupon"  class="couponimg" width="372px" height="347px">
+                <img src="./images/1c.jpeg" alt="coupon"  class="couponimg">
             </div>
         </div>
           <div class="container-fluid">
-            <div id="geo">
-              <p id="out"></p>
-              <p id="weatherOut"></p></li>
-            </div>
             <nav class="navbar navbar-expand-lg fixed-top">
               <div class="container-fluid navbottom">
-                <a class="navbar-brand navbrand" href="#">Zomato</a>
+                <a class="navbar-brand" href="#">Zomato</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                
+                <span id="weatherOut"></span>
                 <ul class="d-flex mode">
                   <li><a href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
                   <li><a href="#"><i class="bi bi-person-plus"></i> SignUp</a></li>
@@ -37,9 +33,7 @@
                         <i class="bi bi-moon-fill" id="maan" style="color:#737eac;"></i>
                      </span>
                     </a></li>
-                    <li> <a href="#" onclick="geolocation()"><i class="bi bi-geo-alt-fill"></i></a>
-                  <p id="out"> &#127782;</p>
-                  <p id="weatherOut"></p></li>
+                    <li> <a href="#" onclick="geolocation()"><i class="bi bi-geo-alt-fill"></i></a></li>
                 </ul>
              </div>
             </nav>
@@ -228,7 +222,7 @@
 
               function showPosition(data){
                   console.log(data)
-                  x.innerText=`Latitude is ${data.coords.latitude}, Longitude is ${data.coords.longitude}`
+                  //x.innerText=`Latitude is ${data.coords.latitude}, Longitude is ${data.coords.longitude}`
                   let latitude = data.coords.latitude;
                   let longitude = data.coords.longitude;
                   const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
@@ -239,8 +233,8 @@
                   //return datatype
                   .then((data) => {
                       let cityName = data.city.name
-                      let weather = `${data.list[0].temp.day} degree`
-                      let output = `Weather of ${cityName} is ${weather}`
+                      let weather = `${data.list[0].temp.day} degree;`
+                      let output = `${weather} ${cityName} `
                       console.log(data)
                       y.innerText = output;
                   })

@@ -98,6 +98,16 @@ li{
     margin-bottom:25px;
     font-size: 20px;
 }
+.mode{
+    margin-top: -20px;
+}
+#weatherOut{
+
+    color: white;
+    margin-top: -26px;
+    margin-left: 147px;
+
+}
 .logo >span{
     margin-left:19px;
     font-size:54px;
