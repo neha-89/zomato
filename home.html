@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link href="home.css" rel="stylesheet" type="text/css"/>
+        <script src="home.js"></script>
+        <script>queryProjects();</script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <center>
+                <h1>Dynamic DropDown</h1>
+            </center>
+            <hr/>
+            <select id="city" onChange="getRest()">
+                <option>----SELECT CITY-----</option>
+            </select>
+            <select id="restaurant">
+                <option>----SELECT Restaurant-----</option>
+            </select>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Tijuana</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Site Select<span class="caret"></span></a>
+                  <ul class="dropdown-menu" id="projectSelectorDropdown">
+                  </ul>
+                </li>         
+              </ul>
+        </div>
+        <script>
+            window.onload=getCity()
+        </script>
+    </body>
+</html>

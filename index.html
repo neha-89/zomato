@@ -48,10 +48,10 @@
                             <span>Find The Best Restaurants Near You</span> 
                  </div>
                  <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" onChange ="getCity()" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Please Select City
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu" id = "city" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">Delhi</a></li>
                             <li><a class="dropdown-item" href="#">Pune</a></li>
                             <li><a class="dropdown-item" href="#">Banglore</a></li>
@@ -59,7 +59,7 @@
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                             Please Select Restaurants
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <ul class="dropdown-menu" id="restaurant" aria-labelledby="dropdownMenuButton2">
                             <li><a class="dropdown-item" href="#">Delhi</a></li>
                             <li><a class="dropdown-item" href="#">Pune</a></li>
                             <li><a class="dropdown-item" href="#">Banglore</a></li>
@@ -210,6 +210,7 @@
             </footer>
             <script>
               window.onload = loadCoupon();
+              window.onload = getCity();
               var x = document.getElementById("out");
               var y = document.getElementById("weatherOut");
               function geolocation(){
@@ -233,7 +234,7 @@
                   //return datatype
                   .then((data) => {
                       let cityName = data.city.name
-                      let weather = `${data.list[0].temp.day} degree;`
+                      let weather = `${data.list[0].temp.day}degree`
                       let output = `${weather} ${cityName} `
                       console.log(data)
                       y.innerText = output;
