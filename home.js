@@ -75,3 +75,5 @@ var list = document.getElementById("projectSelectorDropdown");
             li.appendChild(link);
             list.appendChild(li);
           }
+
+          console.log("test" && "book")
