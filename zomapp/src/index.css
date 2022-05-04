@@ -181,6 +181,9 @@ ul{
     transform: rotate(20deg);*/
     transform: scale(1.1)
 }
+.footer{
+    background-color:#f67e4f;
+}
 
 @keyframes dance{
     0% {transform: rotate(-5deg)}
@@ -190,19 +193,16 @@ ul{
     100% {transform: rotate(-5deg)}
 }
 
-.footer{
-    background-color:#f67e4f;
-}
 
 @media screen and (max-width:1600px){
     body{
-        background-color:lightblue
+        background-color:white;
     }
 }
 
 @media screen and (max-width:1400px){
     body{
-        background-color:rgb(202, 241, 215)
+        background-color:white
     }
 }
 
