@@ -1,10 +1,42 @@
 import React from 'react';
 import { Component } from 'react';
 
-
+const url ="https://zomatoajulypi.herokuapp.com/location";
+const restUrl="https://zomatoajulypi.herokuapp.com/restaurant?stateId="
 class Search extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        this.state = {
+            location : '',
+            restaurants : ''
+        }
+    }
+    renderCity = (data) => {
+        if(data){
+            return data.map((item) =>{
+                return(
+                    <li value={item.state_id} key={item.state_id}>{item.state}</li>
+                )
+            })
+        }
+    }
+    renderRest = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <li key={item.restaurant_id} value={item.restaurant_id}>{item.restaurant_name} | {item.address}</li>
+                )
+            })
+        }
+    }
+    handleRestaurants = (event) => {
+        let stateId = event.target.value;
+        fetch(`${restUrl}${stateId}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            // console.log(">>>>",data)
+           this.setState({restaurants:data})
+        })
     }
 
     render(){
@@ -19,26 +51,32 @@ class Search extends Component{
                             <span>Find The Best Restaurants Near You</span> 
                  </div>
                  <div className="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" onChange ="getCity()" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" onChange ={this.handleRestaurants} id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Please Select City
                         </button>
                         <ul className="dropdown-menu" id = "city" aria-labelledby="dropdownMenuButton1">
-                            <li><a className="dropdown-item" href="#">Delhi</a></li>
-                            <li><a className="dropdown-item" href="#">Pune</a></li>
-                            <li><a className="dropdown-item" href="#">Banglore</a></li>
+                        {this.renderCity(this.state.location)}
                         </ul>
                         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                             Please Select Restaurants
                         </button>
                         <ul className="dropdown-menu" id="restaurant" aria-labelledby="dropdownMenuButton2">
-                            <li><a className="dropdown-item" href="#">Delhi</a></li>
-                            <li><a className="dropdown-item" href="#">Pune</a></li>
-                            <li><a className="dropdown-item" href="#">Banglore</a></li>
+                        {this.renderRest(this.state.restaurants)}
                         </ul>
                   </div>
               </div>
             </>
         )
     }
+    componentDidMount(){
+        
+        fetch(url,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({location:data})
+        })
+    }
 }
+
+
 export default Search;
