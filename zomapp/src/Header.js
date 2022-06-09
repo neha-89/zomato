@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 import { Component } from 'react';
 
 
@@ -25,8 +27,9 @@ class Header extends Component {
                 </button>
                 {/* <span id="weatherOut"></span> */}
                 <ul className="d-flex mode">
-                  <li><a href="#"><i className="bi bi-box-arrow-in-right"></i> Login</a></li>
-                  <li><a href="#"><i className="bi bi-person-plus"></i> SignUp</a></li>
+                  <li><Link to = '/login'><i className="bi bi-box-arrow-in-right"></i>Login</Link> </li>
+                  <li><Link to='/register'><i className="bi bi-person-plus"></i> SignUp</Link></li>
+                  <li><Link to='/home'><i className="bi bi-person-plus"></i> Home</Link></li>
                   {/* <li><a  href="#" onclick="darkmode()"> 
                      <span className="sun-icon">
                        <i className="bi bi-sun-fill" id="zon" style="color:#d8c658;"></i>
