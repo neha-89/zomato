@@ -38,6 +38,12 @@ class Search extends Component{
            this.setState({restaurants:data})
         })
     }
+    handleRestaurants = (event) => {
+        let restId = event.target.value;
+        console.log(">>>>inside",restId)
+        this.props.history.push(`/details?restId=${restId}`)
+    }
+
 
     render(){
         return(
