@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 
 const url ="https://zomatoajulypi.herokuapp.com/location";
 const restUrl="https://zomatoajulypi.herokuapp.com/restaurant?stateId="
@@ -12,6 +13,7 @@ class Search extends Component{
         }
     }
     renderCity = (data) => {
+        console.log(">>>>data>>",data)
         if(data){
             return data.map((item) =>{
                 return(
@@ -21,6 +23,7 @@ class Search extends Component{
         }
     }
     renderRest = (data) => {
+        console.log(data)
         if(data){
             return data.map((item) => {
                 return(
@@ -29,21 +32,24 @@ class Search extends Component{
             })
         }
     }
-    handleRestaurants = (event) => {
-        let stateId = event.target.value;
-        fetch(`${restUrl}${stateId}`,{method:'GET'})
-        .then((res) => res.json())
-        .then((data) => {
-            // console.log(">>>>",data)
-           this.setState({restaurants:data})
-        })
-    }
+  
+
     handleRestaurants = (event) => {
         let restId = event.target.value;
         console.log(">>>>inside",restId)
         this.props.history.push(`/details?restId=${restId}`)
     }
 
+    handleCity = (event) => {
+        let restId = event.target.value;
+        console.log(restId)
+        fetch(`${restUrl}${restId}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+             console.log(">>>>",data)
+           this.setState({restaurants:data})
+        })
+    }
 
     render(){
         return(
@@ -57,13 +63,13 @@ class Search extends Component{
                             <span>Find The Best Restaurants Near You</span> 
                  </div>
                  <div className="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" onChange ={this.handleRestaurants} id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" onChange ={this.handleCity} id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Please Select City
                         </button>
                         <ul className="dropdown-menu" id = "city" aria-labelledby="dropdownMenuButton1">
                         {this.renderCity(this.state.location)}
                         </ul>
-                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" onChange={this.handleRestaurants} data-bs-toggle="dropdown" aria-expanded="false">
                             Please Select Restaurants
                         </button>
                         <ul className="dropdown-menu" id="restaurant" aria-labelledby="dropdownMenuButton2">
@@ -85,4 +91,4 @@ class Search extends Component{
 }
 
 
-export default Search;
+export default withRouter(Search);
