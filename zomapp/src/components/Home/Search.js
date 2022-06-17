@@ -150,26 +150,26 @@ class Search extends Component{
     render(){
         console.log(">>>>inside props>>",this.props)
         return(
-            <div>
-                <div id="search">
-                    <div id="logo">
-                        <span>E!</span>
-                    </div>
-                    <div id="heading">
-                        Find The Best Restaurants Near You
-                    </div>
-                    <div className="dropdown">
-                        <select onChange={this.handleCity}>
-                            <option>-----PLEASE SELECT CITY-----</option>
-                            {this.renderCity(this.state.location)}
-                        </select>
-                        <select className="restlist" onChange={this.handleRestaurants}>
-                            <option>-----PLEASE SELECT RESTAURANTS-----</option>
-                            {this.renderRest(this.state.restaurants)}
-                        </select>
-                    </div>
-                </div>
-            </div>
+            <div className="container-fluid image">
+                              <div className="logo">
+                                     <span>Z!</span>
+                                   
+                             </div>
+                              <div className="heading ">
+                                         <span>Find The Best Restaurants Near You</span> 
+                              </div>
+                              <div className="dropdown">
+                                        <select onChange={this.handleCity}>
+                                            <option>-----PLEASE SELECT CITY-----</option>
+                                            {this.renderCity(this.state.location)}
+                                        </select>
+                                        <select className="restlist" onChange={this.handleRestaurants}>
+                                            <option>-----PLEASE SELECT RESTAURANTS-----</option>
+                                            {this.renderRest(this.state.restaurants)}
+                                        </select>
+            
+                               </div>
+                          </div>
         )
     }
 
