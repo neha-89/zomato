@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import './listing.css';
+import axios from 'axios';
 import ListingDisplay from './listDisplay';
 
 let restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=";
@@ -16,7 +17,7 @@ class Listing extends Component{
         return(
             <>
              <h1 id="heading">Listing Page</h1>
-                <div class="mainContent">
+                <div className="mainContent">
                     <div id="filter">
                         <h2>Filters</h2>
                         <div id="filter1">
@@ -28,7 +29,7 @@ class Listing extends Component{
                             </select>
                         </div>
                       
-                       <div class="filter2">
+                       <div className="filter2">
                             <h4>Cuisine</h4>
                             <ul>
                                 <li><input type="checkbox"/>North Indian</li>
@@ -36,7 +37,7 @@ class Listing extends Component{
                             </ul>
                             
                        </div> 
-                       <div class="filter3">
+                       <div className="filter3">
                         <h4>Cost for two</h4>
                         <ul>
                             <li> <input type="radio"/>less than $200</li>
@@ -44,7 +45,7 @@ class Listing extends Component{
                         </ul>
                        
                     </div> 
-                    <div class="filter4">
+                    <div className="filter4">
                         <h4>Sort</h4>
                         <ul>
                             <li><input type="checkbox"/>Price low to high</li>
