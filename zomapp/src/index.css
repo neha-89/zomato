@@ -161,7 +161,9 @@ li{
     margin-left: 6%;
 }
 .card{
-    margin:8px;
+    /* margin:8px; */
+    margin: 37px;
+    width: 293%;
 }
 ul{
     list-style: none;
