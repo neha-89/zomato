@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import './details.css';
 class MenuDisplay extends Component {
 
     orderId= [];
@@ -34,17 +34,17 @@ class MenuDisplay extends Component {
                     <div key={item._id}>
                         <div className="col-md-7">
                             <b>{item.menu_id}</b> &nbsp;
-                            <img src={item.menu_image} style={{width:80,height:80}}/>&nbsp;
+                            <img src={item.menu_image} className = "m-img"/>&nbsp;
                             {item.menu_name}- Rs.{item.menu_price}
                         </div>
                         <div className="col-md-4">
                             <button className="btn btn-success"
                             onClick={() => {this.placeOrder(item.menu_id)}}>
-                                <span className="glyphicon glyphicon-plus"/>
+                                <span className="bi bi-plus"/>
                             </button> &nbsp;
                             <button className="btn btn-danger"
                             onClick={() => {this.removeOrder(item.menu_id)}}>
-                                <span className="glyphicon glyphicon-minus"/>
+                                <span className="bi bi-dash"/>
                             </button>
                         </div>
                     </div>

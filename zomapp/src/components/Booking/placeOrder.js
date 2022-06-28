@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import './placeOrder.css'
-import Header from '../../header'
+
 
 const url = "http://zomatoajulypi.herokuapp.com/menuItem";
-const purl = "http://localhost:9700/placeOrder";
+const purl = "http://localhost:3000/placeOrder";
 
 class PlaceOrder extends Component {
     constructor(props){
@@ -51,7 +51,7 @@ class PlaceOrder extends Component {
             },
             body:JSON.stringify(obj)
         })
-        //.then(this.props.history.push('/viewBooking'))
+        .then(this.props.history.push('/viewBooking'))
         .then(console.log('order Added'))
     }
 
@@ -59,7 +59,7 @@ class PlaceOrder extends Component {
         if(!sessionStorage.getItem('loginStatus')){
             return(
                 <div>
-                    <Header/>
+                  
                     <center>
                         <h2>Login First To Place Order</h2>    
                     </center>
@@ -68,7 +68,7 @@ class PlaceOrder extends Component {
         }
         return(
             <>
-                <Header/>
+               
             <div className="container">
                 <hr/>
                 <div className="panel panel-primary">
@@ -76,7 +76,8 @@ class PlaceOrder extends Component {
                         <h3>Your Order For {this.props.match.params.restName}</h3>
                     </div>
                     <div className="panel-body">
-                        <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
+                        {/* <form action="https://developerpayment.herokuapp.com/paynow" method="POST"> */}
+                        <form method="POST" >
                         <input type="hidden" name="cost" value={this.state.cost}/>
                         <input type="hidden" name="id" value={this.state.id}/>
                         <input type="hidden" name="hotel_name" value={this.state.hotel_name}/>
@@ -108,7 +109,7 @@ class PlaceOrder extends Component {
                                 <h2>Total Price is Rs.{this.state.cost}</h2>
                             </div>
                         </div>
-                        <button className="btn btn-success" onClick={this.checkout}>Procced</button>
+                        <button className="btn btn-success" onClick={this.checkout}>Proceed</button>
                         </form>
                     </div>
                 </div>

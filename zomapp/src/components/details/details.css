@@ -24,13 +24,18 @@ body{
     height:500px;
     width:90%;
     margin-left:5%;
-    margin-top:2%;
+    margin-top:8%;
 }
 .imgDiv{
     height:400px;
     width:40%;
     float: left;
-    border:5px groove gray
+    
+}
+.m-img{
+    width:80px;
+    height:80px;
+    margin:5px;
 }
 .imgDiv > img {
     height:400px;
